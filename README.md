@@ -54,4 +54,4 @@ You may want to import animations from the Animate.css lib.
 
 ## Known issues
 
-Due to performance optimisation, any element added to the DOM after the lib is initiated (through Ajax calls for instance) will not be animated unless you rerun SAinit(), which I would _not recommended_.
+Due to performance optimisation, any element added to the DOM after the lib is initiated (through Ajax calls for instance) will not be animated unless you rerun SAinit(), which I would _not recommend_.
