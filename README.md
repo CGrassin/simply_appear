@@ -6,9 +6,9 @@ See original article on my website for examples: http://charleslabs.fr/en/projec
 
 ## Features
 
-* Native JS (no jQuery!), compatible with IE8+ (although animations are supported IE10+)
+* Lightweight and lightning fast: less than 2KB in native JS (no jQuery!)
+* Compatible with IE8+ (although animations are supported IE10+)
 * Uses CSS transitions (less messy than JS animations that override the "style" tag)
-* Lightweight and lightning fast
 * Page still works with JS disabled
 * Comes with the basic animations : fade-in, slide-up, slide-down, slide-left, slide-right, zoom-in. Super easy to add more!
 
@@ -54,4 +54,4 @@ You may want to import animations from the Animate.css lib.
 
 ## Known issues
 
-Due to performance optimisation, any element added to the DOM after the lib is initiated (through Ajax calls for instance) will not be animated unless you rerun SAinit(), which I would _not recommend_.
+Due to some performance optimisation, any element added to the DOM after the lib is initiated (through Ajax calls for instance) will not be animated. The solution is to rerun `SAinit()`. I would not recommend doing this too frequently.
