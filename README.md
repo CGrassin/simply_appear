@@ -1,25 +1,28 @@
 # Simply Appear
 
-Simply Appear is an extremely lightweight native Javascript and CSS framework for web apparition animations. It is easy to use and comes with basic animations.
+Simply Appear is an extremely lightweight native Javascript and CSS framework to animate objects appearing on web pages.
+
+It is easy to integrate and comes with 8 basic animations styles (see examples below).
 
 See original article on my website for examples: http://charleslabs.fr/en/project-Simply+Appear
 
 ## Features
 
-* Lightweight and lightning fast: less than 2KB in native JS (no jQuery!)
-* Compatible with IE8+ (although animations are supported IE10+)
-* Uses CSS transitions (less messy than JS animations that override the "style" tag)
-* Page still works with JS disabled
-* Comes with the basic animations : fade-in, slide-up, slide-down, slide-left, slide-right, zoom-in. Super easy to add more!
+* **Lightweight** and lightning fast: less than 2&nbsp;KB (CSS+JS)
+* **Native JS** (no jQuery required!)
+* **Compatible with IE9+** (although animations are supported IE10+)
+* Uses **CSS transitions** (less messy than JS animations that override the "style" tag)
+* Page still works with JS disabled (without animations)
+* Comes with the basic animations: fade-in, slide-up, slide-down, slide-left, slide-right, zoom-in. Easy to add more!
 
 ## Usage 
 
-Using this library is super easy:
+Using this library is easy:
 
-0. Download the lib and put it to your website's directory
-1. In your `head`, add `<link rel="stylesheet" href="/sappear/sappear.min.css" type="text/css">`
-2. Before the closing tag of your `body`, add `<script src="/sappear/sappear.min.js"></script><script>SAinit();</script>`
-3. Wrap all of your content in `<div id="bodywrapper"></div>`
+0. Download/clone the lib from [Github](https://github.com/CGrassin/simply_appear) and put it somewhere your website's directory
+1. In your `<head>`, add `<link rel="stylesheet" href="/sappear/sappear.min.css" type="text/css">`
+2. Before the closing tag of your `<body>`, add `<script src="/sappear/sappear.min.js"></script><script>SAinit();</script>`
+3. Wrap all of your content in `<div id="bodywrapper"></div>` or give the containing body the `overflow-x: hidden;` CSS property
 4. Add animations to your elements! To do so, add the following classes `SAppear ANIMATION-NAME`. The available animations are :
     * SA-fade-in
     * SA-slide-up
@@ -31,9 +34,25 @@ Using this library is super easy:
     * SA-roll-right
     * ... Your own animations!
 
-## Add your own animations
+In a single example:
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/sappear/sappear.min.css" type="text/css">
+  </head>
+  <body style="overflow-x: hidden;">
+    <!-- Page content... -->
+    <p class="alert alert-info SAppear SA-fade-in">This "p" will be animated with a fade in effect.</p>
+    <!-- More page content... -->
+    <script src="/sappear/sappear.min.js"></script><script>SAinit();</script>
+  </body>
+</html>
+```
 
-Adding your animations is super easy. For instance, add this to your CSS code :
+## Adding custom animations
+
+Should you want more options, adding your own animations is very easy. For instance, add this to the CSS code:
 
 ```css
 .SAenabled.SA-ANIMATION-NAME{
@@ -50,8 +69,8 @@ Adding your animations is super easy. For instance, add this to your CSS code :
 
 This code makes the element appear with a spinning and zooming effect of 1 second.
 
-You may want to import animations from the Animate.css lib.
+A good source of inspiration is the [Animate.css](https://animate.style/) framework.
 
-## Known issues
+## Known limitations
 
-Due to some performance optimisation, any element added to the DOM after the lib is initiated (through Ajax calls for instance) will not be animated. The solution is to rerun `SAinit()`. I would not recommend doing this too frequently.
+Due to some performance optimisation, any element added to the DOM after the lib is initiated (through Ajax calls for instance) will not be animated. The solution is to rerun `SAinit()` after loading the new content.
