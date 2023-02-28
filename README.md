@@ -21,8 +21,8 @@ Using this library is easy:
 
 0. Download/clone the lib from [Github](https://github.com/CGrassin/simply_appear) and put it somewhere your website's directory
 1. In your `<head>`, add `<link rel="stylesheet" href="/sappear/sappear.min.css" type="text/css">`
-2. Before the closing tag of your `<body>`, add `<script src="/sappear/sappear.min.js"></script><script>SAinit();</script>`
-3. Wrap all of your content in `<div id="bodywrapper"></div>` or give the containing body the `overflow-x: hidden;` CSS property
+2. Before the closing tag of your `<body>`, add `<script src="/sappear/sappear.min.js"></script>`
+3. Give the containing body the `overflow-x: hidden;` CSS property or wrap all of your content in `<div id="bodywrapper"></div>` or 
 4. Add animations to your elements! To do so, add the following classes `SAppear ANIMATION-NAME`. The available animations are :
     * SA-fade-in
     * SA-slide-up
@@ -45,7 +45,7 @@ In a single example:
     <!-- Page content... -->
     <p class="alert alert-info SAppear SA-fade-in">This "p" will be animated with a fade in effect.</p>
     <!-- More page content... -->
-    <script src="/sappear/sappear.min.js"></script><script>SAinit();</script>
+    <script src="/sappear/sappear.min.js"></script>
   </body>
 </html>
 ```
@@ -73,4 +73,4 @@ A good source of inspiration is the [Animate.css](https://animate.style/) framew
 
 ## Known limitations
 
-Due to some performance optimisation, any element added to the DOM after the lib is initiated (through Ajax calls for instance) will not be animated. The solution is to rerun `SAinit()` after loading the new content.
+Due to some performance optimisation, any element added to the DOM after the lib is initiated (through Ajax calls for instance) will not be animated. The solution is to run the `SAinit()` function after loading the any new content.

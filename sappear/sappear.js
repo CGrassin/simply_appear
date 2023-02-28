@@ -19,17 +19,18 @@ function SAinit() {
   }
 
   // We trigger it once to display the elements that are already in screen.
-  SAupdate();
+  SAupdate(null,1.0);
 
   // We add event listeners to the window
   window.addEventListener("scroll",SAupdate,false);
   window.addEventListener("resize",SAupdate,false);
 }
+window.addEventListener('DOMContentLoaded', SAinit)
 
-function SAupdate() {
+function SAupdate(e,ratio = 0.8) {
   for (var i=SAanims.length-1;i>=0;i--){
     //If element is ABOVE view, we consider it viewed.
-    if ((SAanims[i].getBoundingClientRect().top-window.innerHeight*4/5)<0) {
+    if ((SAanims[i].getBoundingClientRect().top-window.innerHeight*ratio)<0) {
       //animated[i].className +=  " SAviewed";
       SAanims[i].classList.add('SAviewed');
       //Already viewed : we remove it from the array.
