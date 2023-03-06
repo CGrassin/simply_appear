@@ -20,8 +20,8 @@ See original article on my website for examples: http://charleslabs.fr/en/projec
 Using this library is easy:
 
 0. Download/clone the lib from [Github](https://github.com/CGrassin/simply_appear) and put it somewhere your website's directory
-1. In your `<head>`, add `<link rel="stylesheet" href="/sappear/sappear.min.css" type="text/css">`
-2. Before the closing tag of your `<body>`, add `<script src="/sappear/sappear.min.js"></script>`
+1. In your `<head>`, add `<link rel="stylesheet" href="/simply_appear/sappear.min.css" type="text/css">`
+2. Before the closing tag of your `<body>`, add `<script src="/simply_appear/sappear.min.js"></script>`
 3. Give the containing body the `overflow-x: hidden;` CSS property or wrap all of your content in `<div id="bodywrapper"></div>` or 
 4. Add animations to your elements! To do so, add the following classes `SAppear ANIMATION-NAME`. The available animations are :
     * SA-fade-in
@@ -39,13 +39,13 @@ In a single example:
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/sappear/sappear.min.css" type="text/css">
+    <link rel="stylesheet" href="/simply_appear/sappear.min.css" type="text/css">
   </head>
   <body style="overflow-x: hidden;">
     <!-- Page content... -->
     <p class="alert alert-info SAppear SA-fade-in">This "p" will be animated with a fade in effect.</p>
     <!-- More page content... -->
-    <script src="/sappear/sappear.min.js"></script>
+    <script src="/simply_appear/sappear.min.js"></script>
   </body>
 </html>
 ```
